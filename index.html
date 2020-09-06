@@ -1,0 +1,52 @@
+<html>
+<body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAia7_NNonsJqdaruopiOqK_6xCl7XmBMo",
+    authDomain: "test-arduino-4bd7c.firebaseapp.com",
+    databaseURL: "https://test-arduino-4bd7c.firebaseio.com",
+    projectId: "test-arduino-4bd7c",
+    storageBucket: "test-arduino-4bd7c.appspot.com",
+    messagingSenderId: "360728415999",
+    appId: "1:360728415999:web:3f3a9bf3bff9b9beb786ca",
+    measurementId: "G-SH4106CQ7G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  function OpenOrClose(){
+  firebase.database().ref().set({
+  LED_STATUS: 1
+  });
+  }
+</script>
+<style>
+body{
+background-color: blue;
+}
+
+button{
+padding: 20px;
+width: 200;
+border: solid lightblue 3px;
+border-radius: 5px;
+background: linear-gradient(to right, cornflowerblue, lightblue);
+font-size: 25;
+margin-top: 200;
+}
+</style>
+<center>
+<button onclick="OpenOrClose()"><strong>OPEN/CLOSE</strong></button>
+</center>
+</body>
+</html>
