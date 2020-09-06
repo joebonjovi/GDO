@@ -29,6 +29,12 @@
   LED_STATUS: 1
   });
   }
+
+if(localStorage.getItem("pass") == null){
+var password = prompt("Enter Password");
+}else if(password != "1213"){
+return false;
+}
 </script>
 <style>
 body{
