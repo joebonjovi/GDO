@@ -24,17 +24,22 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
+function Password(){
+
+if(localStorage.getItem("pass") == null){
+var password = prompt("Enter Password");
+localStorage.setItem("pass", "done");
+}else if(password != "1213"){
+return false;
+}
+}
+
   function OpenOrClose(){
   firebase.database().ref().set({
   LED_STATUS: 1
   });
   }
 
-if(localStorage.getItem("pass") == null){
-var password = prompt("Enter Password");
-}else if(password != "1213"){
-return false;
-}
 </script>
 <style>
 body{
