@@ -25,17 +25,6 @@
   firebase.analytics();
 
 
-if(localStorage.getItem("pass") == null){
-var password = prompt("Enter Password");
-}
-
-if(password == "1213"){
-localStorage.setItem("pass", "done");
-}else{
-return false;
-}
-
-
   function OpenOrClose(){
   firebase.database().ref().set({
   LED_STATUS: 1
